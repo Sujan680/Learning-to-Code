@@ -5,9 +5,11 @@
 //export function Profile() {}
 //import {Profile} from './Profile.jsx';
 
+import About from "./About"
 import Bio from "./Bio"
 import Gallery from "./Gallery"
 import { Profile } from "./Profile"
+import TodoList from "./TodoList"
 
 function App() {
 
@@ -17,6 +19,8 @@ function App() {
       <Bio/>
       <Profile/>
       <Gallery/>
+      <About/>
+      <TodoList/>
       
     </>
   )
