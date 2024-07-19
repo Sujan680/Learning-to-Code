@@ -9,6 +9,7 @@ import About from "./About"
 import Bio from "./Bio"
 import Gallery from "./Gallery"
 import { Profile } from "./Profile"
+import Accordion from "./Props"
 import TodoList from "./TodoList"
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Gallery/>
       <About/>
       <TodoList/>
+    <Accordion/>
       
     </>
   )
