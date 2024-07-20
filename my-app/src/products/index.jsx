@@ -1,6 +1,7 @@
 // import ProductItems from "./components/ProductItems";
-import PropTypes from 'prop-types';
+import PropTypes, { func } from 'prop-types';
 import ProductItems from './components/ProductItems';
+import { useState } from 'react';
 // const productsItems = ["Products 1", "products 2", "Products 3"]
 
 const ProductList = ({address, city, lists}) => {
@@ -8,6 +9,12 @@ const ProductList = ({address, city, lists}) => {
     // const { address, city } = props;
 
     const flag = false;
+
+    const [value, setValue] = useState(true);
+
+    function handleToggle(){
+        setValue(!value)
+    }
 
     // function renderTextBlock(getFlag){
     //     return getFlag ? (
@@ -17,8 +24,8 @@ const ProductList = ({address, city, lists}) => {
     //     )
     // }
 
-    const renderTextBlock = flag ? 
-   ( <h4 style={{textAlign:"center"}}>{address} is located in Gandaki and headquarter is {city}</h4> ): (<h4>Hello world</h4>)
+//     const renderTextBlock = flag ? 
+//    ( <h4 style={{textAlign:"center"}}>{address} is located in Gandaki and headquarter is {city}</h4> ): (<h4>Hello world</h4>)
 
     ProductList.propTypes = {
         address: PropTypes.string.isRequired,
@@ -29,16 +36,18 @@ const ProductList = ({address, city, lists}) => {
         <>
             <h2 style={{color:"red", textAlign:"center"}}>Ecommerce Project</h2>
             {/* <ProductItems/> */}
-            {/* {
-                flag ?  <h4 style={{textAlign:"center"}}>{address} is located in Gandaki and headquarter is {city} </h4>
+            {
+                value ?  <h4 style={{textAlign:"center"}}>{address} is located in Gandaki and headquarter is {city} </h4>
                 :
                 <h3 style={{textAlign:'center'}}>Helo world</h3>
-            } */}
-
-            {
-                renderTextBlock
             }
+
+            {/* {
+                renderTextBlock
+            } */}
            
+            <button onClick={handleToggle}>TOggle me</button>
+
             <ul style={
                 {
                     backgroundColor:"grey",
