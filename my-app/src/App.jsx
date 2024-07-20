@@ -13,11 +13,11 @@ function App() {
       <h2>React js tuotorial 2024</h2>
 
       <ClassBasedComponent/>
-
+{/* 
       <FunctionalComponent/>
 
       <ProductList lists={productsItems}  address="Myagdi" city="Pokhara" />
-    </>
+    */}</> 
   )
 }
 
