@@ -1,6 +1,8 @@
 
 import './App.css'
 import ClassBasedComponent from './components/class-based-component'
+import ContextButtonComponent from './components/context-concept/Button'
+import ContextTextComponent from './components/context-concept/Text'
 import Counter from './components/Counter'
 import FetchData from './components/fetchData'
 import FunctionalComponent from './components/functionalComponent'
@@ -23,9 +25,12 @@ function App() {
 
      {/* <Counter/> */}
 
-     <FetchData/>
+     {/* <FetchData/> */}
+
+     <ContextButtonComponent/>
+     <ContextTextComponent/>
     </> 
   )
 }
 
-export default App
+export default App;

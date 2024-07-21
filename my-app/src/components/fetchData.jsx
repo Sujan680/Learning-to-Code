@@ -30,8 +30,9 @@ const FetchData = () => {
 
     // useEffect(() => {
     //     fetchAllUsers();
-    // },[])
-
+    // },[])  //[] empty array means it will render only one time
+                // no dependency passed means runs on every render
+                //[prosp, state] props or state value whenever changes it renders 
   return (
  
     <>
