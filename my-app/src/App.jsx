@@ -7,6 +7,7 @@ import Counter from './components/Counter'
 import FetchData from './components/fetchData'
 import FunctionalComponent from './components/functionalComponent'
 import ProductList from './products'
+import CounterApp from './use-reducer'
 
 const productsItems = ["Products 1", "products 2", "Products 3"]
 
@@ -27,8 +28,10 @@ function App() {
 
      {/* <FetchData/> */}
 
-     <ContextButtonComponent/>
-     <ContextTextComponent/>
+     {/* <ContextButtonComponent/>
+     <ContextTextComponent/> */}
+
+     <CounterApp/>
     </> 
   )
 }
