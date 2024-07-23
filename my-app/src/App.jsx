@@ -1,39 +1,60 @@
+import { Link, useRoutes, useNavigate } from "react-router-dom";
+import Home from "./pages/Home";
+import Layout from "./components/Layout";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
-import './App.css'
-import ClassBasedComponent from './components/class-based-component'
-import ContextButtonComponent from './components/context-concept/Button'
-import ContextTextComponent from './components/context-concept/Text'
-import Counter from './components/Counter'
-import FetchData from './components/fetchData'
-import FunctionalComponent from './components/functionalComponent'
-import ProductList from './products'
-import CounterApp from './use-reducer'
-
-const productsItems = ["Products 1", "products 2", "Products 3"]
+function CustomRoutes() {
+  const routes = useRoutes([
+    {
+      path: '/',
+      element: <Layout />,
+      children: [
+        {
+          path: '/',
+          element: <Home />
+        },
+        {
+          path: 'about',
+          element: <About />
+        },
+        {
+          path: 'contact',
+          element: <Contact />
+        },
+      ],
+    },
+    {
+      path: '*',
+      element: <NotFound />
+    },
+  ]);
+  return routes;
+}
 
 function App() {
- 
+  const navigate = useNavigate();
+
   return (
-    <>
-      {/* <h2>React js tuotorial 2024</h2>
 
-      <ClassBasedComponent/>
+    <div>
+      <nav>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+        </ul>
+      </nav>
 
-      <FunctionalComponent/>
- 
-      <ProductList lists={productsItems}  address="Myagdi" city="Pokhara" />
-     */}
+      <button onClick={() => navigate('/')}>Go to Home</button>
+      <button onClick={() => navigate('/about')}>Go to About</button>
+      <button onClick={() => navigate('/contact')}>Go to Contact</button>
 
-     {/* <Counter/> */}
+      <CustomRoutes />
+    </div>
 
-     {/* <FetchData/> */}
-
-     {/* <ContextButtonComponent/>
-     <ContextTextComponent/> */}
-
-     <CounterApp/>
-    </> 
-  )
+  );
 }
 
 export default App;
