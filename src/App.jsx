@@ -7,6 +7,7 @@
 
 import About from "./About"
 import Bio from "./Bio"
+import Cards from "./components/Cards"
 import Gallery from "./Gallery"
 import { Profile } from "./Profile"
 import Accordion from "./Props"
@@ -22,8 +23,8 @@ function App() {
       <Gallery/>
       <About/>
       <TodoList/>
-    <Accordion/>
-      
+      <Accordion/>
+      <Cards/>
     </>
   )
 }
