@@ -9,6 +9,7 @@ import About from "./About"
 import Bio from "./Bio"
 import Cards from "./components/Cards"
 import ConditionalRendering from "./components/ConditionalRendering"
+import AnotherExample from "./components/ConditionalRendering/AnotherExample"
 import LoginLogoutToggle from "./components/ConditionalRendering/LoginLogoutToggle"
 import ToggleComponents from "./components/ConditionalRendering/ToggleComponents"
 import Gallery from "./Gallery"
@@ -31,6 +32,7 @@ function App() {
       <ConditionalRendering/> */}
       <ToggleComponents/>
       <LoginLogoutToggle/>
+      <AnotherExample/>
     </>
   )
 }
