@@ -9,6 +9,8 @@ import About from "./About"
 import Bio from "./Bio"
 import Cards from "./components/Cards"
 import ConditionalRendering from "./components/ConditionalRendering"
+import LoginLogoutToggle from "./components/ConditionalRendering/LoginLogoutToggle"
+import ToggleComponents from "./components/ConditionalRendering/ToggleComponents"
 import Gallery from "./Gallery"
 import { Profile } from "./Profile"
 import Accordion from "./Props"
@@ -18,7 +20,7 @@ function App() {
 
   return (
     <>
-      <h1>Hello World...</h1>
+      {/* <h1>Hello World...</h1>
       <Bio/>
       <Profile/>
       <Gallery/>
@@ -26,7 +28,9 @@ function App() {
       <TodoList/>
       <Accordion/>
       <Cards/>
-      <ConditionalRendering/>
+      <ConditionalRendering/> */}
+      <ToggleComponents/>
+      <LoginLogoutToggle/>
     </>
   )
 }
